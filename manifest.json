@@ -1,13 +1,8 @@
 {
     "name":"Manifoldjs Test Portal",
     "short_name": "Manifoldjs Test Portal",
-    "mjs_extended_scope":[
-        "http://wordpress.com",
-        "https://wordpress.com",
-        "http://*.wordpress.com"
-        ],
-    "scope":"https://*.wordpress.com",
-    "start_url":"https://wordpress.com",
+    "scope":"*",
+    "start_url":"http://mjsroller.azurewebsites.net/",
     "icons": [
     {
       "src": "images/windows-smallsquare-24-24.png",
