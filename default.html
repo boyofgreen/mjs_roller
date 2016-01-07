@@ -1,0 +1,165 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="mobileoptimized" content="0" />
+    <meta charset="utf-8" />
+    <Title>Manifoldjs Test Portal</Title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="css/app.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="content" class="container-fluid" style="padding:1pc 0 0 0">
+        <div id="header" class="text-center">
+          <div class="row">
+              <span class="center-block" >
+            <img src="images/manifoldjs_main_logo.png" alt="icon logo" class="img-responsive center-block" style="height:10pc" />
+
+              </span>
+          
+          </div>  
+            <h1>Manifoldjs Test Portal</h1>
+
+
+        </div>
+        <div class="container">
+        <p class="text-warning"><strong>Warning:</strong> This app provides unrestricted access to the WinRT surface and should be used for development purposes only. Think of the Children!</p>
+
+        </div>
+  <div class="color-band-one">
+      <div class="container">
+
+
+
+
+          <div class="form-group">
+
+
+
+
+              <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1"><label for="server-address-input">Server Address </label></span>
+                  <input type="text" class="form-control" aria-describedby="basic-addon1"
+                         id="server-address-input"
+                         placeholder="http://www.yourfancywebappURLhere.com">
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="input-group">
+                  <button class="btn btn-success" id="submit-address">Go!</button>
+
+              </div>
+
+          </div>
+
+          <div class="panel panel-success">
+              <div class="panel-heading"><h4 class="panel-title"><strong>Q: </strong> What does this app do?</h4></div>
+              <div class="panel-body"><strong>A: </strong> This Allows you to test your web app as a windows hosted web app, including access to the Windows Universal APIs</div>
+          </div>
+          <div class="panel panel-success">
+              <div class="panel-heading"><h4 class="panel-title"><strong>Q: </strong> What doesn't this app do?</h4></div>
+              <div class="panel-body"><strong>A: </strong> It doesn't produce a true appx.  Since it's a "test portal", it also doesn't honor your "mjs_access_whitelist" or scope.  This means Windows API access is turned on for all of your URLs, and links to items outside of the scope will open in this test portal.</div>
+          </div>
+      </div>
+     </div>
+        <div class="color-band-two">
+
+
+            <div class="container">
+                <label for="used-links">Previously Used:</label>
+                <ul class="list-group" id="used-links"></ul>
+
+
+            </div>
+        </div>
+
+<div class="color-band-three">
+
+<div class="container">
+    <h2>find out more about Manifoldjs</h2>
+    
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="images/Manifold_Gif_v50_2.gif" alt="manifoldjs makeing apps">
+                <div class="caption">
+                    <h3>The Basics of Manifoldjs</h3>
+                    <p>get started with Manifoldjs development from this crash course blog post on thishereweb.com</p>
+                    <p><a href="http://www.thishereweb.com/manifoldjs-building-simple-hosted-web-apps/">learn more</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="images/untitled.png" alt="making manifoldjs apps">
+                <div class="caption">
+                    <h3>Make your Next Hack a Manifoldjs App</h3>
+                    <p>get a quick start guide to building apps with Manifoldjs from HTML5hacks.com</p>
+                    <p><a href="http://www.html5hacks.com/blog/2015/08/06/manifoldjs-quick-start/">learn more</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="images/design.png" alt="design for store apps">
+                <div class="caption">
+                    <h3>How do you design for a Web app in an App Store?</h3>
+                    <p>Some tips for @boyofgreen and @AaronGustafson on designing that web app to be released in App Stores via thishereweb.com</p>
+                    <p><a href="http://www.thishereweb.com/designing-web-code-in-a-native-app/">learn more</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--end row-->
+</div>
+
+
+
+
+
+    </div>
+
+
+
+
+    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h4 class="modal-title" id="myModalLabel">You are going where no app has gone before</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>There is no back button here!</h3>
+                    <p> Since we'll be displaying the app just as it will in Manifoldjs, we don't add a back button unless you do on your page.  want to get back?  No problem, just close the app and open it a new to return to the configure page</p> 
+                </div>
+                <div class="modal-footer">
+                    <label class="pull-left">
+                        <input type="checkbox" autocomplete="off" id="skip-check"> don't show this message again
+                    </label>
+                    <button type="button" class="btn btn-primary" id="modal-submit">Make it so!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loading-content">
+        <div class="transparent-overlay"></div>
+        <div id="loading-wrapper" class="loading-wrapper">
+            <progress id="page-load-progress" class="loading-progress win-ring win-large"></progress>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/bundle.js"></script>
+
+</body>
+</html>
