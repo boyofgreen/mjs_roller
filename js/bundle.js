@@ -4,6 +4,11 @@ Windows.UI.ViewManagement.ApplicationView.getForCurrentView().titleBar.backgroun
 Windows.UI.ViewManagement.ApplicationView.getForCurrentView().titleBar.buttonBackgroundColor = Windows.UI.Colors.black;
 Windows.UI.ViewManagement.ApplicationView.getForCurrentView().titleBar.buttonForegroundColor = Windows.UI.Colors.white;
 Windows.UI.ViewManagement.ApplicationView.getForCurrentView().titleBar.foregroundColor = Windows.UI.Colors.white;
+
+
+} else{
+    
+    document.getElementById('windowswarn').style.display = 'none'
 }
 
 
